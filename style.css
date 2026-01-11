@@ -1,0 +1,123 @@
+/* Reset + center layout */
+body{
+    background-color: #f5d04e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Main card */
+.container{
+    display: flex;
+    width: 300px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 0;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    flex-direction: column;
+    /* Shadow for depth */
+    box-shadow: 7px 7px 2px black;
+
+    /* Smooth animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Top main image */
+.main-image{
+    width: 95%;
+    border-radius: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Tag */
+.pin{
+    padding: 5px 10px;
+    background: #f7cf51;
+    width: fit-content;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* Date text */
+.date{
+    margin-top: 0;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+/* Title */
+h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-family: "Merriweather", serif;
+    font-weight: 700; /* valid value */
+}
+
+/* Description */
+.description{
+    margin: 5px 0 20px;
+    padding-left: 10px;
+    color: #9c9c9c;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Author section */
+.author{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Avatar */
+.dp{
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-left: 12px;
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Name */
+.name{
+    font-weight: 700;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* 🔥 Hover effects (hero moment for reel) */
+.container:hover{
+    transform: translateY(-18px) scale(1.3);
+    box-shadow: 10px 10px 100px white;
+    background: linear-gradient(45deg, tomato, yellow);
+}
+
+.container:hover .description{
+    color: white;
+    background-color: green;
+    border-radius: 16px;
+}
+
+.container:hover .main-image{
+    border: 4px solid white;
+    box-shadow: 20px 20px 80px white;
+    transform: scale(1.05);
+}
+
+.container:hover .name{
+    color: white;
+    transform: scale(1.6) translateX(20px);
+}
+
+.container:hover .dp{
+    transform: scale(1.5) translateY(-8px);
+    
+}
